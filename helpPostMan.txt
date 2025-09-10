@@ -1,11 +1,29 @@
 Create Tasks:
     POST → http://localhost:5000/tasks
 
+    {
+  "title": "Team Meeting",
+  "description": "Discuss project updates and deadlines",
+  "status": "Pending"
+   }
+
+
 Get/Read all tasks:
     GET → http://localhost:5000/tasks
 
 Update tasks:
     PUT http://localhost:5000/tasks/1(task_id) 
+    {
+  "title": "Updated Team Meeting",
+  "description": "Updated discussion agenda",
+  "status": "In Progress"
+  }
+
+  {
+  "status": "Completed"
+  }
+
+
 
 Delete task:
     DELETE http://localhost:5000/tasks/1(task_id) 
@@ -15,7 +33,7 @@ Optionals-
     GET /tasks?status=Completed , will be filtered to show only completed tasks
 
  Searching by keyword in title or description:
-    GET /tasks?search=meeting , will return tasks with 'meeting' in title or description
+    GET /tasks?search=Meeting , will return tasks with 'meeting' in title or description
 
  Sorting by createdAt or updatedAt:
     GET /tasks?sortBy=createdAt&order=asc, will sort tasks by creation date in ascending order
