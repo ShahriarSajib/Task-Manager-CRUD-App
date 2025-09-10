@@ -19,8 +19,10 @@ export function getTasks(req, res) {
 
   // filtering by status
   if (req.query.status) {
-    results = results.filter((t) => t.status === req.query.status.toLowerCase());
-  }
+  const status = req.query.status.toLowerCase();
+  results = results.filter((t) => t.status.toLowerCase() === status);
+}
+
 
   // searching by keyword in title or description
   if (req.query.search) {

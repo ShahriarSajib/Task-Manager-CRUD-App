@@ -7,7 +7,6 @@ Create Tasks:
   "status": "Pending"
    }
 
-
 Get/Read all tasks:
     GET → http://localhost:5000/tasks
 
@@ -23,18 +22,20 @@ Update tasks:
   "status": "Completed"
   }
 
-
-
 Delete task:
     DELETE http://localhost:5000/tasks/1(task_id) 
 
 Optionals-
  Filtering by status:
-    GET /tasks?status=Completed , will be filtered to show only completed tasks
+    GET http://localhost:5000/tasks?status=Completed, 
+    will be filtered to show only completed tasks
 
  Searching by keyword in title or description:
-    GET /tasks?search=Meeting , will return tasks with 'meeting' in title or description
+    GET http://localhost:5000/tasks?search=meeting,
+     will return tasks with 'meeting' in title or description
 
  Sorting by createdAt or updatedAt:
-    GET /tasks?sortBy=createdAt&order=asc, will sort tasks by creation date in ascending order
-    GET /tasks?sortBy=updatedAt&order=desc , will sort tasks by updated date in descending order    
+    GET http://localhost:5000/tasks?sortBy=createdAt&order=asc
+, will sort tasks by creation date in ascending order
+    GET http://localhost:5000/tasks?sortBy=updatedAt&order=desc
+, will sort tasks by updated date in descending order    
